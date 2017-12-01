@@ -9,14 +9,15 @@
  * effet de bord : echo par exemple, ou un affichage avec &
  *https://github.com/CGaulier/php-01-12-2017.git
  */
-$ch="Coucou tu veux voir ma planete";
+$ch="Coucou tu veux voir ma planete OUAAAAA";
 /**  $tab c'est mes voyelles à comparer */
 $tab = array('a', 'e', 'i', 'o', 'u', 'y');
 
 function voyelles($stre, $tab){
     $verif =false;
     /** $length je reccup la longueur de ma chaine */
-$length = strlen($stre);
+    $stre =strtolower($stre);
+    $length = strlen($stre);
     for ($i=0;$i<$length-1;$i++){
         /** dans ce for je lui dis que je veux mon index $i prendra comme limite la taille de ma chaine le -1 permet de PARCOURIR touuut LE TABLEAU */
         if(in_array($stre[$i],$tab)) {
